@@ -3,7 +3,8 @@
 #include<graphics.h>
 #include<conio.h>
 #include<dos.h>
-#include<sstream.h>
+#include<string.h>
+#include<stdio.h>
 void main()
 {
 int seats = 108;
@@ -16,22 +17,27 @@ setcolor(BLUE);
 setbkcolor(RED);
 setfillstyle(SOLID_FILL,BLUE);
 /*Draw seats of a theatre as square boxes */
-for(int j = 10 ; j < getmaxy()-50 ; j+=50)
+	char buff[1];
+	double c = 0;
+for(int j = 10 ; j < getmaxy()-50 ; j+=60)
 {
-       int count=0;
-
 	for(int i = 10 ; i < getmaxx()-50 ; i+=50)
-	{ count++;
+	{
+	  c++;
+	  gcvt(c ,3 , buff);
+	//  memset(buff , c , 0);
 	  setfillstyle(SOLID_FILL, BLUE);
 	  //textbackground(RED);
-	  bar(i , j , i + 30 , j + 30);
-	  rectangle(i , j , i + 30 , j + 30);
+	  bar(i , j , i + 35 , j + 35);
+	  rectangle(i , j , i + 35 , j + 35);
 	  setcolor(15);
-	  moveto( i+15 , j+15 );
-	  outtext(str);
+	  moveto( i+16 , j+16 );
+	 // cout << c;
+	  outtext(buff);
+	// print_seat_number(c , i , j);
 	}
 }
 
-delay(30000);
+delay(20000);
 closegraph();
 }
