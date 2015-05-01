@@ -1,2 +1,2 @@
 # mini_project
-mini
+mini project to create a graphical theatre booking system.
