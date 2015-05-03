@@ -7,10 +7,17 @@
 #include<stdio.h>
 void main()
 {
-int seats = 108;
+int total_seats = 84 , total_seats_to_be_booked , display_time , total_seats_booked = 0;
 int gd = DETECT , gm;
 initgraph(&gd,&gm,"c:\\turboc3\\bgi");
-cout << " number of seats available is = " << seats << endl;
+clrscr();
+cout << " number of seats available is = " << total_seats << endl;
+cout << "Enter number of you want to book " << endl;
+cout << "enter total number of display time " << endl;
+cin >> display_time;
+total_seats_booked += total_seats_to_be_booked;
+display_time = display_time * 1000;
+cin >> total_seats_to_be_booked;
 delay(3000);
 clrscr();
 setcolor(BLUE);
@@ -38,6 +45,17 @@ for(int j = 10 ; j < getmaxy()-50 ; j+=60)
 	}
 }
 
-delay(20000);
+delay(display_time);
+clrscr();
+int seat_number;
+int seats[84];
+memset(seats , 0 , 84);
+cout << "enter seat numbers you to book " << endl;
+for(int i = 0 ; i < total_seats_to_be_booked ; i++)
+{
+	cin >> seat_number;
+	seats[seat_number] = 1;
+}
+getch();
 closegraph();
 }
