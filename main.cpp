@@ -47,6 +47,9 @@ int total_seats = 84 , total_seats_to_be_booked , display_time , total_seats_boo
 //int gd = DETECT , gm;
 //initgraph(&gd,&gm,"c:\\turboc3\\bgi");
 clrscr();
+
+start_again:
+
 welcome_screen();
 closegraph();
 clrscr();
@@ -103,8 +106,8 @@ getch();
 closegraph();
 clrscr();
 int seat_number;
-int seats[84];
-memset(seats , 0 , 85);
+int seats[90];
+memset(seats , 0 , 90);
 //gd = DETECT , gm;
 initgraph(&gd,&gm,"c:\\turboc3\\bgi");
 setbkcolor(BLUE);
@@ -146,4 +149,5 @@ for(int p = 10 ; p <= getmaxy()-50 ; p+=60)
 //delay(display_time);
 getch();
 closegraph();
+goto start_again;
 }
