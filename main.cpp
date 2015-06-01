@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /**Many Bugs Cleared
 ***Developed in PES COLLEGE OF ENGINEERING, MANDYA***
 ***nice indentation and implementation***
